@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rename Task</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1 style="border-color:#ff0">Rename {{task.content}}</h1>
+    <br>
+    <form action="/rename/{{task.id}}" method="POST">
+        <input type="text" name="content" id="content" value="{{task.content}}">
+        <input type="submit"value="Rename Task">
+    </form>
+</div>
+
+
+{% endblock %}
